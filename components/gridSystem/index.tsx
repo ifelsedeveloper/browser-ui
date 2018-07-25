@@ -16,7 +16,8 @@ export interface GridProps {
   width?: string,
   height?: string,
   textColor?: string,
-  background?: string
+  background?: string,
+  backgroundImage?: string,
 }
 
 class Grid extends React.PureComponent<GridProps, {}> {
@@ -32,6 +33,7 @@ class Grid extends React.PureComponent<GridProps, {}> {
         height={this.props.height}
         textColor={this.props.textColor}
         background={this.props.background}
+        backgroundImage={this.props.backgroundImage}
       >
         {this.props.children}
       </StyledGrid>
@@ -47,6 +49,7 @@ export interface ColumnProps {
   align?: string,
   verticalAlign?: string,
   background?: string,
+  backgroundImage?: string,
   direction?: string
 }
 
@@ -59,6 +62,7 @@ class Column extends React.PureComponent<ColumnProps, {}> {
         align={this.props.align}
         verticalAlign={this.props.verticalAlign}
         background={this.props.background}
+        backgroundImage={this.props.backgroundImage}
         direction={this.props.direction}
       >
         {this.props.children}

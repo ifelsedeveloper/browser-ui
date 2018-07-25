@@ -1,4 +1,4 @@
-# Brave UI
+# Custom Brave UI extended
 
 > List of reusable React components written in TypeScript to enhance your brave UI
 

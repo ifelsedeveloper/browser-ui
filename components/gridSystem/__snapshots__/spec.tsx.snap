@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gridSystem tests column component matches the snapshot 1`] = `
+<div
+  className="sc-bwzfXH jVikWA"
+  direction={undefined}
+  id={undefined}
+  size={undefined}
+/>
+`;
+
+exports[`gridSystem tests grid component matches the snapshot 1`] = `
+<div
+  className="sc-bdVaJa dzQmNt"
+  disabled={false}
+  height={undefined}
+  id={undefined}
+  width={undefined}
+/>
+`;

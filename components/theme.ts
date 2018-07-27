@@ -27,7 +27,7 @@ const theme = {
     }
   },
   switchButton: {
-    checkedBg: 'inset 0 0 0 16px #ff6000',
+    checkedBg: 'inset 0 0 0 16px #3bb2b8',
     uncheckedBg: '#ccc',
     knob: '#fff'
   }

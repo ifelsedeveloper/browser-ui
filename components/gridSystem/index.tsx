@@ -5,67 +5,69 @@
 import * as React from 'react'
 import { StyledGrid, StyledColumn } from './style'
 
+export interface GridTheme {
+  padding?: string,
+  gridGap?: string,
+  maxWidth?: string,
+  height?: string,
+  color?: string,
+  backgroundColor?: string,
+  backgroundImage?: string
+}
+
 export interface GridProps {
   id?: string,
   disabled?: boolean,
+  columns?: number,
+  onClick?: (e: any) => void,
   children?: React.ReactNode,
-  // Component styles
-  columns?: string,
-  padding?: string,
-  gap?: string,
-  width?: string,
-  height?: string,
-  textColor?: string,
-  background?: string,
-  backgroundImage?: string,
+  theme?: GridTheme
 }
 
 class Grid extends React.PureComponent<GridProps, {}> {
   render () {
+    const { id, disabled, columns, theme, onClick, children } = this.props
     return (
       <StyledGrid
-        id={this.props.id}
-        disabled={this.props.disabled ? this.props.disabled : false}
-        columns={this.props.columns}
-        padding={this.props.padding}
-        gap={this.props.gap}
-        width={this.props.width}
-        height={this.props.height}
-        textColor={this.props.textColor}
-        background={this.props.background}
-        backgroundImage={this.props.backgroundImage}
+        id={id}
+        disabled={disabled || false}
+        theme={theme}
+        onClick={onClick}
+        columns={columns}
       >
-        {this.props.children}
+        {children}
       </StyledGrid>
     )
   }
 }
 
+export interface ColumnTheme {
+  justifyContent?: string,
+  alignItems?: string,
+  backgroundColor?: string,
+  flexDirection?: string,
+  overflow?: string
+}
+
 export interface ColumnProps {
   id?: string,
-  children?: React.ReactNode,
-  // Component styles
   size?: number | string,
-  align?: string,
-  verticalAlign?: string,
-  background?: string,
-  backgroundImage?: string,
-  direction?: string
+  theme?: ColumnTheme,
+  onClick?: (e: any) => void,
+  children?: React.ReactNode
 }
 
 class Column extends React.PureComponent<ColumnProps, {}> {
   render () {
+    const { id, size, theme, children, onClick } = this.props
     return (
       <StyledColumn
-        id={this.props.id}
-        size={this.props.size}
-        align={this.props.align}
-        verticalAlign={this.props.verticalAlign}
-        background={this.props.background}
-        backgroundImage={this.props.backgroundImage}
-        direction={this.props.direction}
+        id={id}
+        size={size}
+        theme={theme}
+        onClick={onClick}
       >
-        {this.props.children}
+        {children}
       </StyledColumn>
     )
   }

@@ -21,6 +21,7 @@ Welcome to the Brave UI repo! Here you will find a list of reusable stateless Re
 * [Creating components and Architecture Overview](https://github.com/brave/brave-ui/blob/master/docs/components.md)
 * [Coverage, running and creating tests](https://github.com/brave/brave-ui/blob/master/docs/tests.md)
 * [Publishing Stories and the Brave-UI package](https://github.com/brave/brave-ui/blob/master/docs/publishing.md)
+* [Brave UI System Interface Engineering Specification](https://github.com/brave/brave-ui/blob/master/docs/spec.md)
 * [Contributing](https://github.com/brave/brave-ui/blob/master/docs/contributing.md)
 
 
@@ -73,12 +74,12 @@ Confirm in your `package.json` that the `brave-ui` is installed. Once you're goo
 If you're looking to contribute to this repo please refer to [Contributing](https://github.com/brave/brave-ui/blob/master/docs/contributing.md) docs.
 
 ```js
-// Let's implement the <BrowserButton /> component
-const { BrowserButton } = require('brave-ui')
+// Let's implement the <PushButton /> component
+const { PushButton } = require('brave-ui')
 
 render () {
   return (
-    <BrowserButton theme='primary' label='something' />
+    <PushButton theme='primary' label='something' />
   )
 }
 ```
